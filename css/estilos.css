@@ -148,7 +148,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12px 24px;
+    padding: 12px 20px;
     gap: 12px;
     font-weight: 600;
     font-size: 16px;
@@ -172,4 +172,28 @@ body{
     display: flex;
     align-items: flex-start;
     gap: 8px;
+}
+
+@media only screen and (max-width: 760px) {
+
+    .website_container{
+        height: 80vh;
+    }
+
+    .banner{
+        display: none !important;
+    }
+
+    .container{
+        width: 300px;
+    }
+
+    .brand, .title h2, .title p, .social-media{
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-media a{
+        flex-direction: column;
+    }
 }
