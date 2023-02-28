@@ -4,6 +4,7 @@
     --title_color: #489AFE;
     --text_color: #636363;
     --primary-button_color: #318DFE;
+    --primary-button_color-hover: #246DC8;
     --secondary-button_color: rgba(49, 141, 254, 0.1);
     --terciary-button_color: #318DFE;
     --border-radius_buttons: 8px;
@@ -14,6 +15,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 
 body{
     width: 100vw;
@@ -36,6 +38,7 @@ body{
     width: 360px;
     height: 516px;
     border-radius: 16px;
+
 }
 
 .container{
@@ -47,6 +50,7 @@ body{
 
     width: 380px;
     height: 100%;
+
 }
 
 .info_container{
@@ -114,6 +118,14 @@ body{
     align-items: center;
     gap: 8px;
     text-decoration: none;
+    padding-right: 16px;
+    transition: all 0.3s;
+}
+
+.social-media>a:hover{
+    background-color: var(--secondary-button_color);
+    border-radius: 8px;
+    transition: all 0.3s;
 }
 
 .social-media img{
@@ -160,12 +172,25 @@ body{
     border: 1px solid var(--terciary-button_color);
     border-radius: 8px;
     color: var(--terciary-button_color);
+    transition: all 0.3s;
+}
+
+.btn-terciary:hover{
+    background-color: var(--terciary-button_color);
+    color: white;
+    transition: all 0.3s;
 }
 
 .btn-primary{
     border-radius: 8px;
     background-color: var(--primary-button_color);
     color: white;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover{
+    background-color: var(--primary-button_color-hover) ;
+    transition: all 0.5s;
 }
 
 .buttons_row{
