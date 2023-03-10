@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 
 :root{
     --title_color: #489AFE;
@@ -8,6 +8,7 @@
     --secondary-button_color: rgba(49, 141, 254, 0.1);
     --terciary-button_color: #318DFE;
     --border-radius_buttons: 8px;
+    --container-width: 1080px
 }
 
 *{
@@ -19,206 +20,407 @@
 
 body{
     width: 100vw;
-    height: 100vh;
     display: grid;
     place-content: center;
     font-family: 'Open Sans';
     font-style: normal;
 }
 
-.website_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    gap: 40px;
-}
-
-.banner{
-    width: 360px;
-    height: 516px;
-    border-radius: 16px;
+h1{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
 
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
 
-    width: 380px;
-    height: 100%;
+h2{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    color: var(--primary-button_color);
 
 }
 
-.info_container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 40px;
-}
-
-.texts{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.brand{
-    display: flex;
-    flex-direction: column;
-}
-
-.logo{
-    width: 190px;
-}
-
-.brand p{
-  
+h3{
     font-weight: 400;
-    font-size: 14px;
-    line-height: 23px;
-    color: var(--text_color);    
+    font-size: 24px;
+    line-height: 20px;
 }
 
-.title{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 4px;
+h4{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
 }
 
-.title h2{
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 36px;
-    color: var(--title_color);
-}
 
-.title p{
+h5{
+    font-size: 18px;
+    line-height: 20px;
     font-weight: 400;
+}
+
+h6{
     font-size: 16px;
-    line-height: 23px;
-    color: var(--text_color);
+    line-height: 16px;
+    font-weight: 400;
 }
 
-.social-media{
+p{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+
+}
+
+.navbar_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0px;
+    gap: 363px;
+
+    width: 100%;
+    max-width: var(--container-width);
+    height: 64px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 3;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0px;
+    transition: 0.6s;
+}
+
+.navbar.sticky{
+    background-color: #ffffff;
+    height: 50px;
+}
+
+.navbar.sticky .navbar_logo-container img{
+    height: 30px;
+    transition: 0.6s;
+}
+
+.navbar.sticky .btn{
+    height: 32px;
+    transition: 0.6s;
+
+}
+
+.navbar .navbar-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 60px;
+
+    list-style-type: none;
+}
+
+.primary-color-text{
+    text-decoration: none;
+    color: var(--primary-300);
+    font-weight: 600;
+}
+
+.navbar_container>img{
+    width: 190px;
+    height: 43px;
+    transition: 0.6s;
+
+}
+
+.navbar_contenido{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 10px;
+    gap: 40px;
+
+    width: 450px;
+    height: 44px;
+}
+
+.navbar_contenido h6{
+    font-weight: 700;
+    color: #FF560B;
+}
+
+
+
+.btn{
+    height: 48px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    width: max-content;
+    transition: 0.6s;
+
+}
+
+.primary-btn{
+    background-color: var(--primary-button_color);
+    color: #FFFFFF;
+    border: none ;
+    filter: drop-shadow(0px 5px 25px rgba(0, 0, 0, 0.15));
+
+}
+
+.whatsapp-btn{
+    background-color: #25D366;
+    color: #FFFFFF;
+    border: none ;
+    padding: 0 16px !important;
+    gap: 8px !important;
+    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.15));
+}
+
+.whatsapp-btn:hover{
+background-color: #128C7E;
+filter: drop-shadow(0px 7px 25px rgba(0, 0, 0, 0.3));
+
+}
+
+
+
+.primary-btn:hover{
+    background: var(--primary-button_color-hover);
+}
+
+.alt-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 12px;
+    
+    color: var(--primary-button_color);
+    border: 1px solid var(--primary-button_color);
+    border-radius: 8px;
+
+}
+
+.alt-btn:hover{
+    background: var(--primary-button_color);
+    color: white;
+}
+
+.blue-text{
+    color: #3A3A8B;
+}
+
+.navbar .icon {
+    display: none;
+    width: 48px;
+    height: 48px;
+    background-color: var(--grey);
+    border-radius: 8px;
+}
+
+.web_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 64px;
+    gap: 80px;
+
+    width: var(--container-width);
+    position: relative;
+    top: 110px;
+    left: 0;
+}
+
+
+
+.banner_container{
+    /* background: url("img/banner.png"); */
+    display: flex;
+    width: 100%;
+    height: 560px;
+    overflow: hidden;
+    border-radius: 16px;
+    position: relative; 
+}
+
+
+.banner-title{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 15px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: left;
+    padding: 40px;
+    
+    background: linear-gradient(255.06deg, rgba(45, 141, 254, 0.1) -0.62%, rgba(45, 141, 254, 0.4) 69.4%, rgba(45, 141, 254, 0.6) 100%);
+}
+
+.banner_container>img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.banner-textos{
+    display: flex;
+    flex-direction: column;
+    max-width: 730px;
+    gap: 10px;
+    
+}
+
+.tittle{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+
+
+.examen_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 24px;
+    gap: 76px;
+
+    width: var(--container-width);
+
+    /* background */
+    
+    background: radial-gradient(43.52% 171.38% at 1.99% 0%, rgba(72, 194, 196, 0.1) 0%, rgba(72, 194, 196, 0) 98.44%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FFFFFF;
+    /* Buttons */
+    
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+}
+
+.examen_content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
     gap: 16px;
+    width: 100%;
 }
 
-.social-media a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    padding-right: 16px;
-    transition: all 0.3s;
-}
-
-.social-media>a:hover{
-    background-color: var(--secondary-button_color);
-    border-radius: 8px;
-    transition: all 0.3s;
-}
-
-.social-media img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4px;
-
-    background: var(--secondary-button_color);
-    border-radius: var(--border-radius_buttons);
-}
-
-.social-media p{
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 21px;
-    color: var(--text_color);    
-}
-
-.buttons_container{
+.examen_text{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
     gap: 8px;
 }
 
-.buttons_container a{
+.servicios_container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    width: var(--container-width);
+}
+
+.servicios_container-cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+    width: var(--container-width);
+}
+
+.servicios_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+
+    width: 100%;
+    height: 353px;
+
+    background: #FFFFFF;
+    /* secondary */
+
+    box-shadow: 0px 5px 20px rgba(32, 32, 32, 0.1);
+    border-radius: 12px;
+}
+
+.servicios_card>img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.servicios_card>p{
+    font-weight: 700;
+}
+
+.servicios_card>a{
     width: 100%;
 }
 
-.btn{
+.servicios_card-adicional{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12px 20px;
-    gap: 12px;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 353px;
+    padding-right: 4px;
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/card_bg.jpg);
+    /* secondary */
+
+    box-shadow: 0px 5px 20px rgba(32, 32, 32, 0.1);
+    border-radius: 12px;
+
+}
+
+.servicios_card-adicional p{
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    text-decoration: none;
-}
-
-.btn-terciary{
-    border: 1px solid var(--terciary-button_color);
-    border-radius: 8px;
-    color: var(--terciary-button_color);
-    transition: all 0.3s;
-}
-
-.btn-terciary:hover{
-    background-color: var(--terciary-button_color);
-    color: white;
-    transition: all 0.3s;
-}
-
-.btn-primary{
-    border-radius: 8px;
-    background-color: var(--primary-button_color);
-    color: white;
-    transition: all 0.3s;
-}
-
-.btn-primary:hover{
-    background-color: var(--primary-button_color-hover) ;
-    transition: all 0.5s;
-}
-
-.buttons_row{
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-@media only screen and (max-width: 760px) {
-
-    .website_container{
-        height: 80vh;
-    }
-
-    .banner{
-        display: none !important;
-    }
-
-    .container{
-        width: 300px;
-    }
-
-    .brand, .title h2, .title p, .social-media{
-        align-items: center;
-        text-align: center;
-    }
-
-    .social-media a{
-        flex-direction: column;
-    }
 }
