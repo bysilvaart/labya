@@ -708,3 +708,52 @@ footer .logo-footer{
 .contacto_banner>p>b{
     color: var(--primary-button_color);
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 15px;
+    width: 100%;
+}
+
+form div{
+    width: 100%;
+}
+
+form textarea, form input{
+    width: 100%;
+
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+       
+    color: #202020;
+}
+form input{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+    height: 45px;
+}
+
+form textarea{
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    gap: 10px;
+    min-height: 135px;
+    max-height: fit-content;
+    resize: vertical;
+}
+
+form textarea:focus-visible, form input:focus-visible, form textarea:focus, form input:focus, form textarea:active, form input:active{
+    border: 2px solid var(--primary-button_color) !important;
+}
