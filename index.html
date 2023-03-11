@@ -150,23 +150,42 @@
 
     <!-- Fin medios de pago -->
 
-            <form id="contact-form" action="send-email.php" method="POST">
-                <div>
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
+            <div class="contacto_container">
+                <div class="contacto_content">
+                    <div class="tittle">
+                        <h2>Contáctanos</h2>
+                        <p>Puedes contactarnos llamándonos a nuestros números de teléfono:<br>
+                            +569 1234 5678, 752 2223333<br>
+                            También puedes encontrarnos en nuestras redes sociales, e incluso enviandonos un correo desde aquí</p>
+                    </div>
+                    <form id="contact-form" method="POST">
+                        <div>
+                          <label for="name"></label>
+                          <input type="text" id="name" name="name" required placeholder="Escribe tu nombre y apellido">
+                        </div>
+                        <div>
+                          <label for="email"></label>
+                          <input type="email" id="email" name="email" required placeholder="Escribe tu correo electrónico">
+                        </div>
+                        <div>
+                            <label for="number"></label>
+                            <input type="text" id="number" name="number" required placeholder="Escribe tu número de teléfono">
+                          </div>
+                        <div>
+                          <label for="message"></label>
+                          <textarea id="message" name="message" required placeholder="Escribe tu mensaje aquí"></textarea>
+                        </div>
+                        <div>
+                          <button type="submit">Enviar</button>
+                        </div>
+                    </form>   
                 </div>
-                <div>
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="contacto_banner">
+                    <p>Estamos a una <b>llamada</b> de distancia</p>
+                    <a href="#" class="btn alt-btn">Llámanos</a>
                 </div>
-                <div>
-                    <label for="message">Mensaje:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                    <div>
-                    <button type="submit">Enviar</button>
-                </div>
-            </form>
+            </div>
+
     
 
         </div>
