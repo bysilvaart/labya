@@ -304,7 +304,11 @@ filter: drop-shadow(0px 7px 25px rgba(0, 0, 0, 0.3));
     justify-content: center;
     align-items: flex-start;
     gap: 10px;
-    width: auto;
+    width: inherit;
+}
+
+p{
+    width: inherit;
 }
 
 
@@ -659,4 +663,48 @@ footer .logo-footer{
     text-align: right;
 }
 
-.contacto_container
+.contacto_container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+}
+
+.contacto_banner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 20px;
+    
+    width: 600px;
+    height: 560px;
+    
+    background-image: url(../img/banner-contacto.png);
+    background-size: cover;
+    background-position: center;
+    
+    border-radius: 16px;
+}
+
+.contacto_content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+
+}
+
+.contacto_banner p{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+    align-items: center;
+    color: #636363;
+}
+
+.contacto_banner>p>b{
+    color: var(--primary-button_color);
+}
