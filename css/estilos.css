@@ -8,7 +8,7 @@
     --secondary-button_color: rgba(49, 141, 254, 0.1);
     --terciary-button_color: #318DFE;
     --border-radius_buttons: 8px;
-    --container-width: 1080px
+    --container-width: 1080px;
 }
 
 *{
@@ -425,6 +425,12 @@ p{
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
+    width: auto;
+}
+
+
+.servicios_card>img{
+    height: auto;
 }
 
 .ubicacion_container{
@@ -557,7 +563,6 @@ p{
 .payment_column img{
     height: 64px;
 }
-
 
 
 
@@ -756,4 +761,174 @@ form textarea{
 
 form textarea:focus-visible, form input:focus-visible, form textarea:focus, form input:focus, form textarea:active, form input:active{
     border: 2px solid var(--primary-button_color) !important;
+}
+
+
+@media (max-width: 480px) {
+    :root{
+        --container-width: 100%;
+    }
+
+    body{
+        padding: 0px 15px;
+    }
+
+    h1{
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 30px;
+    
+    }
+    
+    
+    h2{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 26px;
+        color: var(--primary-button_color);
+    
+    }
+    
+    h3{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 22px;
+    }
+    
+    h4{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 20px;
+    }
+    
+    
+    h5{
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 400;
+    }
+    
+    h6{
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+    }
+    
+    p{
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+    
+    }
+
+    .navbar{
+        width: var(--container-width);
+        height: 60px;
+    }
+
+    .navbar_container{
+        justify-content: center;
+    }
+
+    .navbar_container>img{
+        width: 140px;
+        height: auto;
+    }
+
+    .navbar-list{
+        display: none !important;
+    }
+
+    .web_container{
+        width: var(--container-width);
+        padding: 70px 0px 40px 0px;
+        gap: 40px;
+    }
+
+    .footer-container, .contacto_container, .examen_container, .examen_content, .servicios_container-cards, .chips_row, .tipos-pago, .payment_column {
+        flex-direction: column;
+    }
+
+    .banner-title{
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .banner_container{
+        height: 400px;
+
+    }
+
+    .banner-textos{
+        align-items: center;
+    }
+
+    .banner_container>img{
+        height: 100%;
+        width: auto;
+    }
+
+    .examen_container{
+        gap: 20px;
+        text-align: center;
+    }
+
+    .examen_text{
+        width: 200px;
+    }
+
+    .social-media__container, .footer-info, .detalle, .follow-us__container, .social-media__icons, .payment_column{
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo-footer{
+        height: 50px !important;
+    }
+
+    .ubicacion_container>img{
+        width: var(--container-width);
+    }
+    
+    .ubicacion_container{
+        height: auto;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .chips_row{
+        gap: 10px;
+    }
+
+    .chips_column{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .servicios_card{
+        height: auto;
+    }
+
+    .pago_titulo{
+        flex-direction: column;
+        text-align: center;
+    }
+    .pago_titulo>.tittle{
+        align-items: center;
+    }
+
+    .payment_column>img{
+        width: var(--container-width);
+        height: auto !important;
+    }
+
+    .contacto_banner{
+        width: var(--container-width);
+        height: 450px;
+    }
+
+    .contacto_banner>p{
+        font-size: 28px;
+        line-height: 30px;
+    }
 }
